@@ -23,10 +23,8 @@ function fetchWeatherByLocation(location) {
 }
 
 function setLocationAndWeatherText(data) {
-
   locationMessage.textContent = data[0].location;
   weatherMessage.textContent = data[0].weather;
-
 }
 
 
