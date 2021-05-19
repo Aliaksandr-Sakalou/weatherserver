@@ -8,7 +8,7 @@ const weatherMessage = document.querySelector("#result");
 function fetchWeatherByLocation(location) {
   locationMessage.textContent = 'loading!';
   console.log('loading!');
-  fetch('http://localhost:3000/weather?location=' + location).then((response) => {
+  fetch('/weather?location=' + location).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         console.log(data.error);
@@ -32,6 +32,5 @@ function setLocationAndWeatherText(data) {
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
   fetchWeatherByLocation(search.value);
-
 }
 );
